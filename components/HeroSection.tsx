@@ -5,13 +5,13 @@ export function HeroSection() {
   return (
     <section className="relative bg-gradient-to-br from-blue-600 to-purple-800 text-white overflow-hidden">
       {/* Hero Content */}
-      <div className="relative z-20 text-center py-4 md:py-8 container mx-auto px-6">
-        <h1 className="text-5xl md:text-7xl font-extrabold mb- leading-tight">
+      <div className="relative z-20 text-center py-1 md:py-2 container mx-auto px-4">
+        <h1 className="text-2xl md:text-3xl font-extrabold mb- leading-tight">
           <span>United Colors Painters</span>
         </h1>
-        <p className="text-lg md:text-2xl mb-0 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl mb-0 max-w-2xl mx-auto leading-relaxed">
           <span>We specialize in </span>
-          <span className="text-yellow-300 text-2xl md:text-4xl">
+          <span className="text-yellow-300 text-xl md:text-2xl">
             <Typewriter
               words={[
                 "Residential Painting",
