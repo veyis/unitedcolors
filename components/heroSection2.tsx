@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from 'lucide-react';
+import Link from 'next/link';
+
 
 
 export default function HeroSection2() {
@@ -42,13 +44,18 @@ export default function HeroSection2() {
 
         {/* Call-to-Action Buttons */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-8">
+          
+          <Link href="/getquote">
           <Button
             size="lg"
             className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 font-semibold rounded-lg shadow-xl hover:scale-105 transition-transform duration-300"
           >
             Get a Free Quote
           </Button>
+          </Link>
           
+          <Link href="tel:+19427316
+">
           <Button
             size="lg"
             variant="outline"
@@ -57,13 +64,9 @@ export default function HeroSection2() {
             <Phone className="mr-2 h-6 w-6" />
             Call Us Now
           </Button>
-          <Button
-          size="lg"
-          className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 font-semibold rounded-lg shadow-xl hover:scale-105 transition-transform duration-300"
-          >
-          <Phone className="mr-2 h-6 w-6" />
-          Call Us Now
-          </Button>
+          </Link>
+   
+      
         </div>
       </div>
 
