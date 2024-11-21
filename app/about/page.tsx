@@ -4,6 +4,7 @@ import { StructuredData } from "@/components/structured-data";
 import { MarketingHeader } from "@/components/marketing-header";
 import { Button } from "@/components/ui/button";
 import { Star, Award, Users, Paintbrush } from "lucide-react";
+import Image from "next/image";
 
 import type { Metadata } from "next";
 
@@ -106,10 +107,12 @@ export default function AboutPage() {
               </p>
             </div>
             <div>
-              <img
-                src="/images/our-story.jpg"
-                alt="Our story"
+              <Image
+                src="/home-renovation.jpeg"
+                alt="United Color Painters' Story"
                 className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                width={600}
+                height={400}
               />
             </div>
           </div>
