@@ -44,7 +44,6 @@ interface StructuredDataProps {
 }
 
 export function StructuredData({ 
-  page = "home", 
   blogPost = null 
 }: StructuredDataProps) {
   // Base business JSON-LD
