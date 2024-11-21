@@ -34,10 +34,10 @@ export default function HeroSection2() {
           <br />
           <br />
           <br />
-        
-          <p className="text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed text-white bg-slate-800 bg-opacity-40 p-6 rounded-xl shadow-md">
+        <br />
+          {/* <p className="text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed text-white bg-slate-800 bg-opacity-40 p-6 rounded-xl shadow-md">
             Your trusted partner for residential, commercial, and specialty painting services in PA, NJ, and NY.
-          </p>
+          </p> */}
         </div>
 
         {/* Call-to-Action Buttons */}

@@ -10,13 +10,14 @@ export function HeroSection() {
           <span>United Colors Painters</span>
         </h1>
         <p className="text-lg md:text-xl mb-0 max-w-2xl mx-auto leading-relaxed">
-          <span>We specialize in </span>
+          <span>Your trusted partner,  </span>
           <span className="text-yellow-300 text-xl md:text-2xl">
             <Typewriter
               words={[
                 "Residential Painting",
                 "Commercial Excellence",
                 "Specialty Finishes",
+                "in PA, NJ, and NY",
               ]}
               loop={true}
               cursor
