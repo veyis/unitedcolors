@@ -2,9 +2,15 @@ import { Button } from "@/components/ui/button";
 
 export function CTASection() {
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+    <section className="relative py-20 bg-gradient-to-r from-blue-600 to-purple-800 text-white overflow-hidden">
+      {/* Background Overlay with Decorative Shapes */}
+      <div className="absolute inset-0">
+        <div className="bg-gradient-to-t from-blue-800 via-transparent to-purple-700 opacity-60 h-full"></div>
+     
+      </div>
+      
+      <div className="relative z-10 container mx-auto px-6 text-center">
+        <h2 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
           Ready to Transform Your Space?
         </h2>
         <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
