@@ -4,7 +4,6 @@ import { StructuredData } from '@/components/structured-data'
 import { MarketingHeader } from '@/components/marketing-header'
 import { Button } from "@/components/ui/button"
 import { Star, Award, Users, Paintbrush } from 'lucide-react'
-import Image from 'next/image'
 
 import type { Metadata } from 'next'
 

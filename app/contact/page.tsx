@@ -5,7 +5,6 @@ import { MarketingHeader } from "@/components/marketing-header";
 import { ContactForm } from "@/components/contact-form";
 import { FAQSection } from "@/components/faq-section";
 import { LiveChat } from "@/components/live-chat";
-import { SocialLinks } from "@/components/social-links";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin } from "lucide-react";
 
