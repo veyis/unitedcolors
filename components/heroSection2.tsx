@@ -48,6 +48,7 @@ export default function HeroSection2() {
           >
             Get a Free Quote
           </Button>
+          
           <Button
             size="lg"
             variant="outline"
@@ -55,6 +56,13 @@ export default function HeroSection2() {
           >
             <Phone className="mr-2 h-6 w-6" />
             Call Us Now
+          </Button>
+          <Button
+          size="lg"
+          className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 font-semibold rounded-lg shadow-xl hover:scale-105 transition-transform duration-300"
+          >
+          <Phone className="mr-2 h-6 w-6" />
+          Call Us Now
           </Button>
         </div>
       </div>
