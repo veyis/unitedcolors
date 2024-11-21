@@ -8,6 +8,7 @@ const testimonials = [
     content:
       "United Colors Painters transformed our home beautifully. Their attention to detail and professionalism were outstanding!",
     rating: 5,
+    photo: "/images/testimonials/sarah.jpg",
   },
   {
     name: "Michael Chen",
@@ -15,6 +16,7 @@ const testimonials = [
     content:
       "I'm extremely satisfied with the commercial painting job. They worked efficiently and the results are fantastic.",
     rating: 5,
+    photo: "/images/testimonials/michael.jpg",
   },
   {
     name: "Emily Rodriguez",
@@ -22,6 +24,23 @@ const testimonials = [
     content:
       "As an interior designer, I have high standards. United Colors Painters exceeded my expectations in every way.",
     rating: 5,
+    photo: "/images/testimonials/emily.jpg",
+  },
+  {
+    name: "John Doe",
+    role: "Architect",
+    content:
+      "The team at United Colors Painters is exceptional. They brought our architectural designs to life with precision.",
+    rating: 5,
+    photo: "/images/testimonials/john.jpg",
+  },
+  {
+    name: "Jane Smith",
+    role: "Real Estate Agent",
+    content:
+      "Their painting services have added immense value to the properties I manage. Highly recommend!",
+    rating: 5,
+    photo: "/images/testimonials/jane.jpg",
   },
 ];
 
@@ -39,6 +58,12 @@ export function Testimonials() {
               className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden border border-gray-200"
             >
               <CardContent className="p-8">
+                {/* Customer Photo */}
+                <img
+                  src={testimonial.photo}
+                  alt={`${testimonial.name}'s photo`}
+                  className="w-16 h-16 rounded-full mb-4"
+                />
                 {/* Star Rating */}
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (

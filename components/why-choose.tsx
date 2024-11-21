@@ -1,4 +1,4 @@
-import { Star, Brush, House } from "lucide-react";
+import { Star, Brush, House, Award, ThumbsUp } from "lucide-react";
 
 export function WhyChooseUs() {
   return (
@@ -13,7 +13,7 @@ export function WhyChooseUs() {
         <h2 className="text-5xl md:text-6xl font-extrabold text-center text-gray-800 mb-16 leading-tight">
           Why Choose United Colors Painters?
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {[
             {
               title: "Quality Guaranteed",
@@ -49,7 +49,34 @@ export function WhyChooseUs() {
               </p>
             </div>
           ))}
-        </div>
+          {
+            title: "Customer Testimonials",
+            icon: <ThumbsUp className="w-16 h-16 text-blue-600" />,
+            description:
+              "Our clients love our work! Read their testimonials to see why they choose us for their painting needs.",
+          },
+          {
+            title: "Awards & Certifications",
+            icon: <Award className="w-16 h-16 text-blue-600" />,
+            description:
+              "Recognized for excellence in the painting industry, we have received numerous awards and certifications.",
+          },
+        ].map(({ title, icon, description }) => (
+          <div
+            key={title}
+            className="flex flex-col items-center text-center bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+          >
+            <div className="bg-gradient-to-r from-blue-100 to-purple-100 p-5 rounded-full shadow-md">
+              {icon}
+            </div>
+            <h3 className="text-2xl font-bold mt-6 text-gray-800">
+              {title}
+            </h3>
+            <p className="text-gray-600 mt-4 leading-relaxed">
+              {description}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );

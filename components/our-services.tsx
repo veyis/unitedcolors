@@ -3,27 +3,32 @@ export function Services() {
         {
             title: "Interior Painting",
             href: "/services/interior-painting",
-            description: "Transform your indoor spaces with our expert interior painting services."
+            description: "Transform your indoor spaces with our expert interior painting services. Our team ensures a flawless finish with meticulous attention to detail, enhancing the beauty and ambiance of your home.",
+            icon: "Paintbrush"
         },
         {
             title: "Exterior Painting",
             href: "/services/exterior-painting",
-            description: "Enhance your property's curb appeal with our durable exterior painting solutions."
+            description: "Enhance your property's curb appeal with our durable exterior painting solutions. We use weather-resistant paints to protect your home from the elements while providing a stunning finish.",
+            icon: "Sun"
         },
         {
             title: "Commercial Painting",
             href: "/services/commercial-painting",
-            description: "Professional painting services for offices, retail spaces, and industrial facilities."
+            description: "Professional painting services for offices, retail spaces, and industrial facilities. Our team works efficiently to minimize disruption to your business operations while delivering high-quality results.",
+            icon: "Briefcase"
         },
         {
             title: "Residential Painting",
             href: "/services/residential-painting",
-            description: "Personalized painting solutions for homes of all sizes and styles."
+            description: "Personalized painting solutions for homes of all sizes and styles. We focus on your unique preferences to create a living space that reflects your personality and taste.",
+            icon: "Home"
         },
         {
             title: "Specialty Finishes",
             href: "/services/specialty-finishes",
-            description: "Unique textures and finishes to add character to your walls."
+            description: "Unique textures and finishes to add character to your walls. Our specialty finishes include faux painting, metallic accents, and textured surfaces for a distinctive look.",
+            icon: "Layers"
         },
         {
             title: "Color Consultation",
@@ -109,7 +114,10 @@ export function Services() {
                 <div className="relative p-8 h-full flex flex-col justify-between">
                   {/* Gradient Line and Icon Area */}
                   <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-purple-600"></div>
-                  <div>
+                  <div className="flex items-center mb-4">
+                    <div className="bg-blue-100 rounded-full p-3 mr-4">
+                      <service.icon className="h-6 w-6 text-blue-600" />
+                    </div>
                     <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-800 text-transparent bg-clip-text mb-6">
                       {service.title}
                     </h3>
