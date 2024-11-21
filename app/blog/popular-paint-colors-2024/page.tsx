@@ -29,7 +29,7 @@ export default function BlogPost() {
             <p className="text-gray-600 mb-8">Published on January 15, 2024</p>
             <Image src="/placeholder.svg?height=400&width=800" alt="2024 Paint Color Trends" width={800} height={400} className="w-full h-auto object-cover rounded-lg mb-8" />
             <div className="prose max-w-none">
-              <p>As we enter 2024, new paint color trends are emerging that reflect our desire for both comfort and excitement in our living spaces. At United Color Painters, we're excited to share the top 10 paint colors that are set to dominate interior design this year.</p>
+              <p>As we enter 2024, new paint color trends are emerging that reflect our desire for both comfort and excitement in our living spaces. At United Color Painters, we&apos;re excited to share the top 10 paint colors that are set to dominate interior design this year.</p>
               
               <h2>1. Sage Green</h2>
               <p>This calming, nature-inspired hue brings a sense of tranquility to any room. It pairs well with natural wood tones and crisp whites.</p>
@@ -62,9 +62,9 @@ export default function BlogPost() {
               <p>A versatile neutral that provides warmth and pairs well with both cool and warm color palettes.</p>
 
               <h2>Incorporating These Colors in Your Home</h2>
-              <p>When considering these trendy colors for your home, think about the mood you want to create in each room. Don't be afraid to mix and match colors or use them as accents against neutral backgrounds.</p>
+              <p>When considering these trendy colors for your home, think about the mood you want to create in each room. Don&apos;t be afraid to mix and match colors or use them as accents against neutral backgrounds.</p>
 
-              <p>At United Color Painters, we can help you choose the perfect colors for your space and apply them with expert precision. Contact us today for a consultation and let's bring these exciting 2024 color trends into your home!</p>
+              <p>At United Color Painters, we can help you choose the perfect colors for your space and apply them with expert precision. Contact us today for a consultation and let&apos;s bring these exciting 2024 color trends into your home!</p>
             </div>
             <div className="mt-8">
               <Link href="/blog" className="text-blue-600 hover:underline inline-flex items-center">

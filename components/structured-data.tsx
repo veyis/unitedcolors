@@ -1,188 +1,99 @@
-import Script from 'next/script';
 
-export function StructuredData({
-  page = 'home',
-  blogPost = null,
-}: {
+// Define types for different structured data objects
+type BaseBusinessJsonLd = {
+  "@context": string;
+  "@type": string;
+  name?: string;
+  description?: string;
+  url?: string;
+  logo?: string;
+  contactPoint?: {
+    "@type": string;
+    telephone?: string;
+    contactType?: string;
+  };
+};
+
+type BlogPostJsonLd = {
+  "@context": string;
+  "@type": string;
+  headline: string;
+  description: string;
+  author: {
+    "@type": string;
+    name: string;
+  };
+  datePublished: string;
+  image: string;
+  url: string;
+};
+
+type BlogPost = {
+  title: string;
+  description: string;
+  author: string;
+  publishDate: string;
+  imageUrl: string;
+  url: string;
+} | null;
+
+// Props interface
+interface StructuredDataProps {
   page?: string;
-  blogPost?: any;
-}) {
-  const baseJsonLd = {
+  blogPost?: BlogPost;
+}
+
+export function StructuredData({ 
+  page = "home", 
+  blogPost = null 
+}: StructuredDataProps) {
+  // Base business JSON-LD
+  const baseJsonLd: BaseBusinessJsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "United Color Painters",
-    "image": "https://www.unitedcolorpainters.com/logo.jpg",
-    "@id": "https://www.unitedcolorpainters.com",
-    "url": "https://www.unitedcolorpainters.com",
-    "telephone": "+1-123-456-7890",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Paint Street",
-      "addressLocality": "Philadelphia",
-      "addressRegion": "PA",
-      "postalCode": "19019",
-      "addressCountry": "US",
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 39.9526,
-      "longitude": -75.1652,
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-        ],
-        "opens": "08:00",
-        "closes": "18:00",
-      },
-    ],
-    "sameAs": [
-      "https://www.facebook.com/unitedcolorpainters",
-      "https://www.instagram.com/unitedcolorpainters",
-      "https://www.linkedin.com/company/unitedcolorpainters",
-    ],
+    name: "United Color Painters",
+    description: "Professional painting services for residential and commercial properties",
+    url: "https://www.unitedcolorpainters.com",
+    logo: "https://www.unitedcolorpainters.com/logo.png",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-555-PAINT",
+      contactType: "Customer Service"
+    }
   };
 
-  const serviceSchema = {
-    "@type": "Service",
-    "serviceType": "Painting Service",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "United Color Painters",
+  // Blog post JSON-LD
+  const blogJsonLd: BlogPostJsonLd | null = blogPost ? {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: blogPost.title,
+    description: blogPost.description,
+    author: {
+      "@type": "Person",
+      name: blogPost.author
     },
-    "areaServed": [
-      { "@type": "State", "name": "Pennsylvania" },
-      { "@type": "State", "name": "New Jersey" },
-      { "@type": "State", "name": "New York" },
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Painting Services",
-      "itemListElement": [
-        {
-          "@type": "OfferCatalog",
-          "name": "Residential Painting",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": "Service", "name": "Interior Painting" },
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": "Service", "name": "Exterior Painting" },
-            },
-          ],
-        },
-        {
-          "@type": "OfferCatalog",
-          "name": "Commercial Painting",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": "Service", "name": "Office Painting" },
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Retail Space Painting",
-              },
-            },
-          ],
-        },
-        {
-          "@type": "OfferCatalog",
-          "name": "Specialty Finishes",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": "Service", "name": "Faux Painting" },
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": { "@type": "Service", "name": "Textured Walls" },
-            },
-          ],
-        },
-      ],
-    },
-  };
+    datePublished: blogPost.publishDate,
+    image: blogPost.imageUrl,
+    url: blogPost.url
+  } : null;
 
-  const pageSpecificSchema: { [key: string]: object } = {
-    home: { ...baseJsonLd, ...serviceSchema },
-    residential: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Residential Painting",
-      "provider": baseJsonLd,
-      "areaServed": [
-        { "@type": "State", "name": "Pennsylvania" },
-        { "@type": "State", "name": "New Jersey" },
-        { "@type": "State", "name": "New York" },
-      ],
-      "description":
-        "Expert residential painting services for homes in PA, NJ, and NY. Interior and exterior painting, color consultation, and more.",
-    },
-    commercial: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Commercial Painting",
-      "provider": baseJsonLd,
-      "areaServed": [
-        { "@type": "State", "name": "Pennsylvania" },
-        { "@type": "State", "name": "New Jersey" },
-        { "@type": "State", "name": "New York" },
-      ],
-      "description":
-        "Professional commercial painting services for businesses in PA, NJ, and NY. High-quality finishes, minimal disruption, and expert color consulting.",
-    },
-    exterior: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Exterior Painting",
-      "provider": baseJsonLd,
-      "areaServed": [
-        { "@type": "State", "name": "Pennsylvania" },
-        { "@type": "State", "name": "New Jersey" },
-        { "@type": "State", "name": "New York" },
-      ],
-      "description":
-        "Transform your home's exterior with our professional exterior painting services. Serving PA, NJ, and NY with high-quality finishes.",
-    },
-    blogPost: blogPost
-      ? {
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "headline": blogPost.title,
-          "description": blogPost.description,
-          "datePublished": blogPost.datePublished,
-          "author": {
-            "@type": "Person",
-            "name": blogPost.author,
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "United Color Painters",
-          },
-        }
-      : {},
-  };
-
-  const structuredData = pageSpecificSchema[page] || baseJsonLd;
-
+  // Render script tags with structured data
   return (
-    <Script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData),
-      }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(baseJsonLd)
+        }}
+      />
+      {blogJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(blogJsonLd)
+          }}
+        />
+      )}
+    </>
   );
 }

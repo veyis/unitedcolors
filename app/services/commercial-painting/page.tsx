@@ -6,15 +6,12 @@ import { Button } from "@/components/ui/button"
 import { CheckCircle, Briefcase, Building } from 'lucide-react'
 import Image from 'next/image'
 
-import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
+export const metadata = {
+
   title: 'Commercial Painting Services | United Color Painters',
   description: 'Transform your business environment with our professional commercial painting services in PA, NJ, and NY. Our expert solutions ensure a high-quality finish with minimal disruption.',
-  openGraph: {
-    title: 'Commercial Painting Services | United Color Painters',
-    description: 'Transform your business environment with our professional commercial painting services in PA, NJ, and NY. Our expert solutions ensure a high-quality finish with minimal disruption.',
-  },
+  keywords: 'commercial painting, business painting, office painting, retail painting, industrial painting, PA, NJ, NY, professional painting services, commercial painting solutions',
 }
 
 export default function CommercialPaintingPage() {
@@ -106,7 +103,7 @@ export default function CommercialPaintingPage() {
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-8">Elevate Your Business Environment</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">Contact United Color Painters today for a free consultation and quote. Let's enhance your commercial space!</p>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">Contact United Color Painters today for a free consultation and quote. Let&apos;s enhance your commercial space!</p>
             <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700">
               Get Started
             </Button>

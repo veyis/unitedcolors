@@ -1,10 +1,9 @@
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { StructuredData } from '@/components/structured-data';
-import { Button } from "@/components/ui/button";
-import { Phone } from 'lucide-react';
+
 import { MarketingHeader } from '@/components/marketing-header';
-import Image from 'next/image';
+
 import { Testimonials } from '@/components/testimonials';
 import { CTASection } from '@/components/cta-section';
 import { WhyChooseUs } from '@/components/why-choose';

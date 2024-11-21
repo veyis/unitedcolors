@@ -105,8 +105,8 @@ export default function ContactPage() {
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Why Choose United Color Painters?</h2>
             <div className="max-w-3xl mx-auto">
               <p className="text-center mb-4">At United Color Painters, we pride ourselves on delivering exceptional painting services to residential and commercial clients throughout Pennsylvania, New Jersey, and New York. Our team of skilled professionals is committed to transforming your space with precision, creativity, and attention to detail.</p>
-              <p className="text-center mb-4">We offer a wide range of services, including interior painting, exterior painting, color consultation, and specialty finishes. Whether you're looking to refresh a single room or completely transform your property's appearance, we have the expertise and resources to bring your vision to life.</p>
-              <p className="text-center">Our dedication to quality, use of premium materials, and focus on customer satisfaction set us apart in the industry. Contact us today to experience the United Color Painters difference!</p>
+              <p className="text-center mb-4">We offer a wide range of services, including interior painting, exterior painting, color consultation, and specialty finishes. Whether you&apos;re looking to refresh a single room or completely transform your property&apos;s appearance, we have the expertise and resources to bring your vision to life.</p>
+              <p className="text-center">Our dedication to quality, use of premium materials, and focus on customer satisfaction set us apart in the industry. Contact us today to experience the United Color Painters&apos; difference!</p>
             </div>
           </div>
         </section>

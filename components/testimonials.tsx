@@ -50,7 +50,7 @@ export function Testimonials() {
                 </div>
                 {/* Testimonial Content */}
                 <blockquote className="text-gray-700 mb-6 italic leading-relaxed border-l-4 border-blue-600 pl-4">
-                  "{testimonial.content}"
+                  &ldquo;{testimonial.content}&rdquo;
                 </blockquote>
                 {/* Name and Role */}
                 <div className="font-bold text-lg text-gray-900">

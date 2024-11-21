@@ -3,7 +3,7 @@ import { Footer } from '@/components/footer'
 import { StructuredData } from '@/components/structured-data'
 import { MarketingHeader } from '@/components/marketing-header'
 import { Button } from "@/components/ui/button"
-import { CheckCircle, Paintbrush, Home } from 'lucide-react'
+import { CheckCircle, Paintbrush } from 'lucide-react'
 import Image from 'next/image'
 
 import type { Metadata } from 'next'
@@ -43,7 +43,7 @@ export default function ResidentialPaintingPage() {
               <div className="md:w-1/2">
                 <h2 className="text-3xl font-bold mb-6">Expert Home Painting Services</h2>
                 <p className="text-lg mb-6">
-                  At United Color Painters, we understand that your home is your sanctuary. Our residential painting services are designed to bring your vision to life, enhancing the beauty and value of your property. Whether you're looking to refresh a single room or transform your entire home, our team of skilled painters is here to deliver exceptional results.
+                  At United Color Painters, we understand that your home is your sanctuary. Our residential painting services are designed to bring your vision to life, enhancing the beauty and value of your property. Whether you&apos;re looking to refresh a single room or transform your entire home, our team of skilled painters is here to deliver exceptional results.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-center">
@@ -106,7 +106,7 @@ export default function ResidentialPaintingPage() {
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-8">Ready to Transform Your Home?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">Contact United Color Painters today for a free consultation and quote. Let's bring your vision to life!</p>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">Contact United Color Painters today for a free consultation and quote. Let&apos;s bring your vision to life!</p>
             <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700">
               Get Started
             </Button>

@@ -4,6 +4,7 @@ import { StructuredData } from '@/components/structured-data'
 import { MarketingHeader } from '@/components/marketing-header'
 import { Button } from "@/components/ui/button"
 import { Star, Award, Users, Paintbrush } from 'lucide-react'
+import Image from 'next/image'
 
 import type { Metadata } from 'next'
 
@@ -34,15 +35,15 @@ export default function AboutPage() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="md:w-1/2 mb-8 md:mb-0">
-                <img src="/images/about-team.jpg" alt="United Color Painters Team" className="rounded-lg shadow-lg" width={600} height={400} />
+                <Image src="/images/about-team.jpg" alt="United Color Painters Team" className="rounded-lg shadow-lg" width={600} height={400} />
               </div>
               <div className="md:w-1/2 md:pl-8">
                 <h2 className="text-3xl font-bold mb-4">Our Story</h2>
                 <p className="text-lg mb-4">
-                  Founded in 2000, United Color Painters began with a simple mission: to provide top-quality painting services that transform spaces and exceed client expectations. Over the past two decades, we've grown from a small local operation to a trusted name in residential and commercial painting across Pennsylvania, New Jersey, and New York.
+                  Founded in 2000, United Color Painters began with a simple mission: to provide top-quality painting services that transform spaces and exceed client expectations. Over the past two decades, we&apos;ve grown from a small local operation to a trusted name in residential and commercial painting across Pennsylvania, New Jersey, and New York.
                 </p>
                 <p className="text-lg mb-4">
-                  Our success is built on a foundation of skilled craftsmanship, attention to detail, and a commitment to using only the finest materials. We've assembled a team of experienced painters who share our passion for perfection and customer satisfaction.
+                  Our success is built on a foundation of skilled craftsmanship, attention to detail, and a commitment to using only the finest materials. We&apos;ve assembled a team of experienced painters who share our passion for perfection and customer satisfaction.
                 </p>
               </div>
             </div>

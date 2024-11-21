@@ -5,7 +5,6 @@ import { MarketingHeader } from '@/components/marketing-header'
 import { Button } from "@/components/ui/button"
 import { CheckCircle, MapPin } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 import type { Metadata } from 'next'
 
@@ -80,7 +79,7 @@ export default function NewYorkPage() {
             </div>
             <h3 className="text-xl font-semibold">Local Expertise</h3>
           </div>
-          <p>We understand New York's unique architecture and climate, ensuring long-lasting results.</p>
+          <p>We understand New York&apos;s unique architecture and climate, ensuring long-lasting results.</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="flex items-center mb-4">
@@ -98,7 +97,7 @@ export default function NewYorkPage() {
             </div>
             <h3 className="text-xl font-semibold">Satisfaction Guaranteed</h3>
           </div>
-          <p>We're not happy until you're thrilled with the results of our painting services.</p>
+          <p>We&apos;re not happy until you&apos;re thrilled with the results of our painting services.</p>
           </div>
         </div>
         </div>
@@ -121,7 +120,7 @@ export default function NewYorkPage() {
       <section className="py-16 bg-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold mb-8">Ready to Transform Your New York Property?</h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">Contact United Color Painters today for a free consultation and quote. Let's bring your vision to life!</p>
+        <p className="text-xl mb-8 max-w-2xl mx-auto">Contact United Color Painters today for a free consultation and quote. Let&apos;s bring your vision to life!</p>
         <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
           Get Started
         </Button>
