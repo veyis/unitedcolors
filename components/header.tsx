@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
 import { Logo } from "./logo"
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Phone } from 'lucide-react'
 
 const services = [
   {
@@ -105,19 +105,21 @@ const services = [
   }
 
 ]
-
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <header className="bg-white text-gray-800 shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
+          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Logo />
           </Link>
+
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
             <NavigationMenu>
               <NavigationMenuList>
@@ -153,17 +155,35 @@ export function Header() {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <Button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700" size="sm">
-              Get a Quote
-            </Button>
+
+            {/* Call Phone Button */}
+            <Link href="tel:+14849427316" passHref>
+                <Button variant="outline" size="icon" className="text-gray-800 hover:text-black">
+                <Phone className="h-5 w-5" />
+                </Button>
+            </Link>
+
+            {/* Get a Quote Button */}
+            <Link href="/getquote" passHref>
+              <Button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700" size="sm">
+                Get a Quote
+              </Button>
+            </Link>
+
+            
+          
           </div>
+
+          {/* Mobile Navigation Toggle */}
           <div className="md:hidden">
-            <Button variant="ghost" size="icon"  onClick={toggleMenu}>
+            <Button variant="outline" size="icon" onClick={toggleMenu}>
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden">
           <nav className="container mx-auto px-4 py-4">
@@ -179,7 +199,11 @@ export function Header() {
                 <ul className="mt-2 ml-4 space-y-2">
                   {services.map((service) => (
                     <li key={service.title}>
-                      <Link href={service.href} className="block py-2 text-sm hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>
+                      <Link
+                        href={service.href}
+                        className="block py-2 text-sm hover:text-blue-600"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
                         {service.title}
                       </Link>
                     </li>
@@ -187,51 +211,69 @@ export function Header() {
                 </ul>
               </li>
               <li>
-                <Link href="/about" className="block py-2 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>
+                <Link
+                  href="/about"
+                  className="block py-2 hover:text-blue-600"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="block py-2 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>
+                <Link
+                  href="/contact"
+                  className="block py-2 hover:text-blue-600"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   Contact
                 </Link>
               </li>
               <li>
-                <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700" size="sm">
-                  Get a Quote
-                </Button>
+              <Link href="tel:+14849427316" className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-2 rounded hover:from-blue-600 hover:to-purple-700"
+                  onClick={() => setIsMenuOpen(false)}>
+                <div className="flex items-center justify-center space-x-2">
+                  <Phone className="h-5 w-5" />
+                  <span>Call Now +14849427316</span>
+                </div>
+              </Link>
               </li>
+              <li>
+                <Link
+                  href="/getquote"
+                  className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-2 rounded hover:from-blue-600 hover:to-purple-700"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Get a Quote
+                </Link>
+              </li>
+           
             </ul>
           </nav>
         </div>
       )}
     </header>
-  )
+  );
 }
 
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  )
-})
-ListItem.displayName = "ListItem"
-
+const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a">>(
+  ({ className, title, children, ...props }, ref) => {
+    return (
+      <li>
+        <NavigationMenuLink asChild>
+          <a
+            ref={ref}
+            className={cn(
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              className
+            )}
+            {...props}
+          >
+            <div className="text-sm font-medium leading-none">{title}</div>
+            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
+          </a>
+        </NavigationMenuLink>
+      </li>
+    );
+  }
+);
+ListItem.displayName = "ListItem";
