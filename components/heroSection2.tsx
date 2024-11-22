@@ -20,8 +20,8 @@ export default function HeroSection2() {
       </video>
 
       {/* Floating Decorative Elements */}
-      <div className="absolute -top-10 -left-20 w-96 h-96 bg-gradient-to-br from-blue-400 to-purple-600 opacity-40 rounded-full blur-[120px]"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tr from-blue-300 to-purple-500 opacity-30 rounded-full blur-[100px]"></div>
+      {/* <div className="absolute -top-10 -left-20 w-96 h-96 bg-gradient-to-br from-blue-400 to-purple-600 opacity-40 rounded-full blur-[120px]"></div> */}
+      {/* <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tr from-blue-300 to-purple-500 opacity-30 rounded-full blur-[100px]"></div> */}
 
       {/* Hero Content */}
       <div className="relative z-10 text-center py-28 md:py-40 container mx-auto px-6">
