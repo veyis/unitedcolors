@@ -10,6 +10,7 @@ import { WhyChooseUs } from '@/components/why-choose';
 import {Services } from '@/components/our-services';
 import { HeroSection } from '@/components/HeroSection';
 import HeroSection2 from '@/components/heroSection2';
+import Partners from '@/components/partners';
 
 export const metadata = {
   title: 'United Colors Painters | Expert Painting Services in PA, NJ, NY',
@@ -28,6 +29,7 @@ export default function LandingPage() {
         <HeroSection/>
       <HeroSection2/>
     
+      <Partners />
 
         {/* Services Section */}
         <Services />
