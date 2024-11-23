@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: {
     default: 'United Colors Painters | Professional Painting Services',
-    template: '%s | United Colors Painters'
+    template: '%s | United Colors Painters and Decorators',
   },
   description: 'Expert painting services for residential and commercial buildings in Pennsylvania, New Jersey, and New York. Quality, reliability, and stunning results guaranteed.',
   keywords: ['painting', 'painters', 'professional painting', 'PA', 'NJ', 'NY', 'residential painting', 'commercial painting', 'interior painting', 'exterior painting'],
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     siteName: 'United Colors Painters',
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 }
 
