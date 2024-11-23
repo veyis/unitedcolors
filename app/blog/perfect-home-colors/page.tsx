@@ -4,7 +4,7 @@ import { StructuredData } from '@/components/structured-data';
 import { MarketingHeader } from '@/components/marketing-header';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, Palette } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
