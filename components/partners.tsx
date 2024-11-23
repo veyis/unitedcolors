@@ -19,8 +19,8 @@ const partners = [
 
 export default function Partners() {
   return (
-    <div className="overflow-hidden bg-gray-100 py-8">
-      <div className="relative flex space-x-8 animate-marquee">
+    <div className="overflow-hidden bg-gray-100 py-4">
+      <div className="relative flex space-x-4 animate-marquee">
         {/* Loop through partners and duplicate for seamless scrolling */}
         {[...partners, ...partners].map((partner, index) => (
           <a
@@ -30,7 +30,7 @@ export default function Partners() {
             rel="noopener noreferrer"
             className="flex items-center justify-center"
           >
-            <div className="relative h-16 w-36 mx-4">
+            <div className="relative h-14 w-32 mx-4">
               <Image
                 src={partner.logo}
                 alt={partner.name}
