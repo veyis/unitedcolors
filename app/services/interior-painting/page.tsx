@@ -26,9 +26,13 @@ export default function InteriorPaintingPage() {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Expert Interior Painting Services</h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Revitalize your living space with our professional interior painting services, delivering style and sophistication in PA, NJ, and NY.</p>
+
+            <Link href="/getquote">
             <Button size="lg" className="bg-white text-green-600 hover:bg-green-50">
               Get a Free Quote
             </Button>
+            </Link>
+            
           </div>
         </section>
 
@@ -37,7 +41,7 @@ export default function InteriorPaintingPage() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                <Image src="/placeholder.svg?height=400&width=600" alt="Interior Painting" width={600} height={400} className="rounded-lg shadow-lg" />
+                <Image src="/images/interior1.jpg" alt="Interior Painting" width={600} height={400} className="rounded-lg shadow-lg" />
               </div>
               <div className="md:w-1/2">
                 <h2 className="text-3xl font-bold mb-6">Why Choose Our Interior Painting Services?</h2>
@@ -130,9 +134,9 @@ export default function InteriorPaintingPage() {
               </Card>
               <Card className="hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Top Interior Paint Trends for 2024</h3>
+                  <h3 className="text-xl font-bold mb-2">Top Interior Paint Trends for 2025</h3>
                   <p className="text-gray-600 mb-4">Explore the latest trends in interior painting and how to incorporate them into your home.</p>
-                  <Link href="/blog/paint-trends-2024" className="text-green-600 hover:underline inline-flex items-center">
+                  <Link href="/blog/paint-trends-2025" className="text-green-600 hover:underline inline-flex items-center">
                     Read more <ArrowRight className="ml-1 h-4 w-4" />
                   </Link>
                 </CardContent>
