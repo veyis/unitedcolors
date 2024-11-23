@@ -35,7 +35,7 @@ export default function ExteriorPaintingPage() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                <Image src="/placeholder.svg?height=400&width=600" alt="Exterior Painting" width={600} height={400} className="rounded-lg shadow-lg" />
+                <Image src="/images/exterior-paint1.png" alt="Exterior Painting" width={600} height={400} className="rounded-lg shadow-lg" />
               </div>
               <div className="md:w-1/2">
                 <h2 className="text-3xl font-bold mb-6">Why Choose Our Exterior Painting Services?</h2>
@@ -104,9 +104,12 @@ export default function ExteriorPaintingPage() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-8">Ready to Transform Your Home&apos;s Exterior?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">Contact United Color Painters today for a free consultation and quote. Let&apos;s bring your vision to life!</p>
+        
+            <Link href="/getquote">
             <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700">
               Get Started
             </Button>
+            </Link>
           </div>
         </section>
 
