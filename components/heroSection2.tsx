@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function HeroSection2() {
   return (
-    <section className="relative bg-gradient-to-br from-blue-600 to-purple-800 text-white overflow-hidden">
+    <section className="relative  text-white overflow-hidden">
       {/* Video Background */}
       <video
         autoPlay
