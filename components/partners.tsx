@@ -19,6 +19,7 @@ const partners = [
 
 export default function Partners() {
   return (
+  
     <div className="overflow-hidden bg-gray-100 py-4">
       <div className="relative flex space-x-4 animate-marquee">
         {/* Loop through partners and duplicate for seamless scrolling */}
