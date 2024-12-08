@@ -34,8 +34,8 @@ export default function Partners() {
               <Image
                 src={partner.logo}
                 alt={partner.name}
-                layout="fill"
-                objectFit="contain"
+                width={100}
+                height={100}
                 className="grayscale hover:grayscale-0 transition-all"
               />
             </div>
