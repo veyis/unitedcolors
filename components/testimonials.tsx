@@ -13,7 +13,7 @@ const testimonials = [
     name: "Michael Chen",
     role: "Business Owner",
     content:
-      "I'm extremely satisfied with the commercial painting job. They worked efficiently and the results are fantastic.",
+      "I'm extremely satisfied with the commercial painting job. They worked efficiently, and the results are fantastic.",
     rating: 5,
   },
   {
@@ -27,33 +27,38 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
+    <section className="py-20 bg-gradient-to-b from-white to-gray-100">
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl md:text-6xl font-extrabold text-center text-gray-800 mb-16 leading-tight">
+        {/* Section Header */}
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12 bg-gradient-to-r from-red-600 to-black text-transparent bg-clip-text leading-tight">
           Hear from Our Happy Clients
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        {/* Testimonial Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-2xl overflow-hidden border border-gray-200"
+              className="bg-gradient-to-b from-gray-50 to-white shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-3xl overflow-hidden border border-gray-200"
             >
-              <CardContent className="p-8">
+              <CardContent className="p-6 md:p-8">
                 {/* Star Rating */}
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star
                       key={i}
-                      className="h-6 w-6 text-yellow-400 fill-current"
+                      className="h-6 w-6 text-yellow-500 fill-current"
                     />
                   ))}
                 </div>
+
                 {/* Testimonial Content */}
-                <blockquote className="text-gray-700 mb-6 italic leading-relaxed border-l-4 border-blue-600 pl-4">
+                <blockquote className="text-gray-700 mb-6 italic leading-relaxed border-l-4 border-red-500 pl-4">
                   &ldquo;{testimonial.content}&rdquo;
                 </blockquote>
+
                 {/* Name and Role */}
-                <div className="font-bold text-lg text-gray-900">
+                <div className="font-bold text-lg text-gray-800">
                   {testimonial.name}
                 </div>
                 <div className="text-sm text-gray-500">{testimonial.role}</div>
