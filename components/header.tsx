@@ -317,89 +317,107 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <nav className="md:hidden container mx-auto px-4 py-4">
-          <ul className="space-y-4">
-            <li>
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="flex items-center justify-between w-full text-left"
-                aria-expanded={isMenuOpen}
-              >
-                <span>Services</span>
-                <span className="text-sm" aria-hidden="true">▼</span>
-              </button>
-              <ul className="mt-2 ml-4 space-y-2">
-                {services.map((service) => (
-                  <li key={service.title}>
-                    <Link href={service.href} className="block py-2 text-sm hover:text-red-600">
-                      {service.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-            <li>
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="flex items-center justify-between w-full text-left"
-                aria-expanded={isMenuOpen}
-              >
-                <span>Blog</span>
-                <span className="text-sm" aria-hidden="true">▼</span>
-              </button>
-              <ul className="mt-2 ml-4 space-y-2">
-                {blog.map((post) => (
-                  <li key={post.title}>
-                    <Link href={post.href} className="block py-2 text-sm hover:text-red-600">
-                      {post.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-            <li>
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="flex items-center justify-between w-full text-left"
-                aria-expanded={isMenuOpen}
-              >
-                <span>Projects</span>
-                <span className="text-sm" aria-hidden="true">▼</span>
-              </button>
-              <ul className="mt-2 ml-4 space-y-2">
-                {projects.map((project) => (
-                  <li key={project.title}>
-                    <Link href={project.href} className="block py-2 text-sm hover:text-red-600">
-                      {project.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-            <li>
+   {/* Mobile Menu */}
+{isMenuOpen && (
+  <nav className="md:hidden container mx-auto px-4 py-4">
+    <ul className="space-y-4">
+      {/* Services Menu */}
+      <li>
+        <button
+          onClick={() => setIsMenuOpen(false)}
+          className="flex items-center justify-between w-full text-left"
+          aria-expanded={isMenuOpen}
+        >
+          <span>Services</span>
+          <span className="text-sm" aria-hidden="true">▼</span>
+        </button>
+        <ul className="mt-2 ml-4 space-y-2">
+          {services.map((service) => (
+            <li key={service.title}>
               <Link
-                href="tel:+14849427316"
-                className="block w-full bg-gradient-to-r from-red-500 to-black text-white text-center py-2 rounded hover:from-black hover:to-red-500"
+                href={service.href}
+                className="block py-2 text-sm hover:text-red-600"
               >
-                <div className="flex items-center justify-center space-x-2">
-                  <Phone className="h-5 w-5" />
-                  <span>Call Now</span>
-                </div>
+                {service.title}
               </Link>
             </li>
-            <li>
+          ))}
+        </ul>
+      </li>
+
+      {/* Blog Menu */}
+      <li>
+        <button
+          onClick={() => setIsMenuOpen(false)}
+          className="flex items-center justify-between w-full text-left"
+          aria-expanded={isMenuOpen}
+        >
+          <span>Blog</span>
+          <span className="text-sm" aria-hidden="true">▼</span>
+        </button>
+        <ul className="mt-2 ml-4 space-y-2">
+          {blog.map((post) => (
+            <li key={post.title}>
               <Link
-                href="/getquote"
-                className="block w-full bg-gradient-to-r from-red-500 to-black text-white text-center py-2 rounded hover:from-black hover:to-red-500"
+                href={post.href}
+                className="block py-2 text-sm hover:text-red-600"
               >
-                Get a Quote
+                {post.title}
               </Link>
             </li>
-          </ul>
-        </nav>
-      )}
+          ))}
+        </ul>
+      </li>
+
+      {/* Projects Menu */}
+      <li>
+        <button
+          onClick={() => setIsMenuOpen(false)}
+          className="flex items-center justify-between w-full text-left"
+          aria-expanded={isMenuOpen}
+        >
+          <span>Projects</span>
+          <span className="text-sm" aria-hidden="true">▼</span>
+        </button>
+        <ul className="mt-2 ml-4 space-y-2">
+          {projects.map((project) => (
+            <li key={project.title}>
+              <Link
+                href={project.href}
+                className="block py-2 text-sm hover:text-red-600"
+              >
+                {project.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </li>
+
+      {/* Call Now Button */}
+      <li>
+        <Link
+          href="tel:+14849427316"
+          className="block w-full bg-gradient-to-r from-red-500 to-black text-white text-center py-2 rounded hover:from-black hover:to-red-500"
+        >
+          <div className="flex items-center justify-center space-x-2">
+            <Phone className="h-5 w-5" />
+            <span>Call Now</span>
+          </div>
+        </Link>
+      </li>
+
+      {/* Get a Quote Button */}
+      <li>
+        <Link
+          href="/getquote"
+          className="block w-full bg-gradient-to-r from-red-500 to-black text-white text-center py-2 rounded hover:from-black hover:to-red-500"
+        >
+          Get a Quote
+        </Link>
+      </li>
+    </ul>
+  </nav>
+)}
     </header>
   );
 }
