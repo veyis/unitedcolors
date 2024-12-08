@@ -1,4 +1,4 @@
-import { Paintbrush } from 'lucide-react'
+
 import Image from 'next/image'
 
 export function Logo() {
@@ -12,7 +12,7 @@ export function Logo() {
       
        />
     
-    <div className="text-container ml-2 -m-1">
+    <div className="text-container ml-4">
       <span className="text-united text-lg sm:text-xl font-bold text-gray-800">United</span>
       <span className="text-colors text-lg sm:text-xl font-normal text-red-600">Colors</span>
     </div>

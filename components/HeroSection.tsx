@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 export function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-br from-red-600 to-red-500 text-white overflow-hidden">
+    <section className="relative bg-gradient-to-br from-red-900 to-red-500 text-white overflow-hidden">
       {/* Hero Content */}
       <div className="relative z-20 text-center py-1 md:py-2 container mx-auto px-4">
         <h1 className="text-2xl md:text-3xl font-extrabold mb- leading-tight">
