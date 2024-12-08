@@ -25,11 +25,12 @@ export default function LandingPage() {
       <MarketingHeader />
       <Header />
       <main className="flex-grow">
-        {/* Hero Section */}
-        <HeroSection/>
-      <HeroSection2/>
     
-      <Partners />
+        {/* <HeroSection/> */}
+      <HeroSection2/>
+    <HeroSection/>
+    
+
 
         {/* Services Section */}
         <Services />
@@ -42,6 +43,7 @@ export default function LandingPage() {
 
         {/* CTA Section */}
         <CTASection />
+        <Partners />
       </main>
       <Footer />
     </div>

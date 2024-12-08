@@ -25,7 +25,7 @@ export default function HeroSection2() {
 
       {/* Hero Content */}
       <div className="relative z-10 text-center py-28 md:py-40 container mx-auto px-6">
-        {/* <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight bg-blue-800 bg-opacity-0 text-blue-950 rounded-md px-4 py-2 inline-block shadow-lg">
+        {/* <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight bg-blue-800 bg-opacity-0 text-red-950 rounded-md px-4 py-2 inline-block shadow-lg">
           United Colors Painters
         </h1> */}
         <div className="relative z-20 mt-6">
@@ -48,7 +48,7 @@ export default function HeroSection2() {
           <Link href="/getquote">
           <Button
             size="lg"
-            className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 font-semibold rounded-lg shadow-xl hover:scale-105 transition-transform duration-300"
+            className="bg-white text-gray-600 hover:bg-blue-50 px-8 py-4 font-semibold rounded-lg shadow-xl hover:scale-105 transition-transform duration-300"
           >
             Get a Free Quote
           </Button>
@@ -59,7 +59,7 @@ export default function HeroSection2() {
           <Button
             size="lg"
             variant="outline"
-            className="bg-transparent border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 font-semibold rounded-lg shadow-xl hover:scale-105 transition-transform duration-300"
+            className="bg-transparent border-white text-white hover:bg-white hover:text-red-600 px-8 py-4 font-semibold rounded-lg shadow-xl hover:scale-105 transition-transform duration-300"
           >
             <Phone className="mr-2 h-6 w-6" />
             Call Us Now

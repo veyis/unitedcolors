@@ -210,7 +210,7 @@ export function Header() {
               <NavigationMenuList>
                 {/* Services Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="hover:text-blue-600">
+                  <NavigationMenuTrigger className="hover:text-red-600">
                     Services
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -218,7 +218,7 @@ export function Header() {
                       {services.map((service) => (
                         <li key={service.title}>
                           <NavigationMenuLink asChild>
-                            <Link href={service.href} className="block py-2 text-sm hover:text-blue-600">
+                            <Link href={service.href} className="block py-2 text-sm hover:text-red-600">
                               <div className="font-semibold">{service.title}</div>
                               <p className="text-gray-600 text-sm">{service.description}</p>
                             </Link>
@@ -230,7 +230,7 @@ export function Header() {
                 </NavigationMenuItem>
                 {/* Projects Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="hover:text-blue-600">
+                  <NavigationMenuTrigger className="hover:text-red-600">
                     Projects
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -238,7 +238,7 @@ export function Header() {
                       {projects.map((project) => (
                         <li key={project.title}>
                           <NavigationMenuLink asChild>
-                            <Link href={project.href ?? "/projects/default"} className="block py-2 text-sm hover:text-blue-600">
+                            <Link href={project.href ?? "/projects/default"} className="block py-2 text-sm hover:text-red-600">
                               <div className="font-semibold">{project.title}</div>
                               <p className="text-gray-600 text-sm">{project.description}</p>
                             </Link>
@@ -250,7 +250,7 @@ export function Header() {
                 </NavigationMenuItem>
                 {/* Blog Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="hover:text-blue-600">
+                  <NavigationMenuTrigger className="hover:text-red-600">
                     Blog
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -258,7 +258,7 @@ export function Header() {
                       {blog.map((post) => (
                         <li key={post.title}>
                           <NavigationMenuLink asChild>
-                            <Link href={post.href} className="block py-2 text-sm hover:text-blue-600">
+                            <Link href={post.href} className="block py-2 text-sm hover:text-red-600">
                               <div className="font-semibold">{post.title}</div>
                               <p className="text-gray-600 text-sm">{post.description}</p>
                             </Link>
@@ -270,7 +270,7 @@ export function Header() {
                 </NavigationMenuItem>
                 {/* Company Links */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="hover:text-blue-600">
+                  <NavigationMenuTrigger className="hover:text-red-600">
                     Company
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -278,7 +278,7 @@ export function Header() {
                       {company.map((company) => (
                         <li key={company.title}>
                           <NavigationMenuLink asChild>
-                            <Link href={company.href ?? "/projects/default"} className="block py-2 text-sm hover:text-blue-600">
+                            <Link href={company.href ?? "/projects/default"} className="block py-2 text-sm hover:text-red-600">
                               <div className="font-semibold">{company.title}</div>
                               <p className="text-gray-600 text-sm">{company.description}</p>
                             </Link>
@@ -301,7 +301,7 @@ export function Header() {
 
             {/* Get a Quote Button */}
             <Link href="/getquote" passHref>
-              <Button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700" size="sm">
+              <Button className="bg-gradient-to-r from-red-500 to-black text-white hover:from-black hover:to-red-500" size="sm">
                 Get a Quote
               </Button>
             </Link>
@@ -333,7 +333,7 @@ export function Header() {
               <ul className="mt-2 ml-4 space-y-2">
                 {services.map((service) => (
                   <li key={service.title}>
-                    <Link href={service.href} className="block py-2 text-sm hover:text-blue-600">
+                    <Link href={service.href} className="block py-2 text-sm hover:text-red-600">
                       {service.title}
                     </Link>
                   </li>
@@ -352,7 +352,7 @@ export function Header() {
               <ul className="mt-2 ml-4 space-y-2">
                 {blog.map((post) => (
                   <li key={post.title}>
-                    <Link href={post.href} className="block py-2 text-sm hover:text-blue-600">
+                    <Link href={post.href} className="block py-2 text-sm hover:text-red-600">
                       {post.title}
                     </Link>
                   </li>
@@ -371,7 +371,7 @@ export function Header() {
               <ul className="mt-2 ml-4 space-y-2">
                 {projects.map((project) => (
                   <li key={project.title}>
-                    <Link href={project.href} className="block py-2 text-sm hover:text-blue-600">
+                    <Link href={project.href} className="block py-2 text-sm hover:text-red-600">
                       {project.title}
                     </Link>
                   </li>
@@ -381,7 +381,7 @@ export function Header() {
             <li>
               <Link
                 href="tel:+14849427316"
-                className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-2 rounded hover:from-blue-600 hover:to-purple-700"
+                className="block w-full bg-gradient-to-r from-red-500 to-black text-white text-center py-2 rounded hover:from-black hover:to-red-500"
               >
                 <div className="flex items-center justify-center space-x-2">
                   <Phone className="h-5 w-5" />
@@ -392,7 +392,7 @@ export function Header() {
             <li>
               <Link
                 href="/getquote"
-                className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-2 rounded hover:from-blue-600 hover:to-purple-700"
+                className="block w-full bg-gradient-to-r from-red-500 to-black text-white text-center py-2 rounded hover:from-black hover:to-red-500"
               >
                 Get a Quote
               </Link>
