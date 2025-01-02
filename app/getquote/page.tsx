@@ -79,9 +79,10 @@ export default function GetQuotePage() {
                     id="service"
                     name="service"
                     required
+                    defaultValue=""
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring focus:ring-blue-600 focus:ring-opacity-50"
                   >
-                    <option value="" disabled selected>
+                    <option value="" disabled>
                       Select a Service
                     </option>
                     <option value="interior-painting">Interior Painting</option>

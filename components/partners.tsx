@@ -31,12 +31,12 @@ export default function Partners() {
             rel="noopener noreferrer"
             className="flex items-center justify-center"
           >
-            <div className="relative h-8 w-32 mx-4">
+            <div className="relative h-8 w-32 mx-4 ">
               <Image
                 src={partner.logo}
                 alt={partner.name}
-                width={100}
-                height={100}
+                width={90}
+                height={90}
                 className="grayscale hover:grayscale-0 transition-all"
               />
             </div>
