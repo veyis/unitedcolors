@@ -4,53 +4,110 @@ import Image from 'next/image';
 
 export function Services() {
   const services = [
+    // Painting Services
     {
       title: "Interior Painting",
       href: "/services/interior-painting",
-      description: "Transform your indoor spaces with our expert interior painting services.",
-      image: "/images/interior-painting1.png"
+      description: "Transform your indoor spaces with expert interior painting services. Our professional painters deliver flawless finishes for homes and offices in New Jersey, New York, and Pennsylvania. Get a free quote today!",
+      image: "/images/interior-painting1.png",
+      alt: "Professional Interior Painting Services in New Jersey, New York, and Pennsylvania"
     },
     {
       title: "Exterior Painting",
       href: "/services/exterior-painting",
-      description: "Enhance your property's curb appeal with our durable exterior painting solutions.",
-      image: "/images/exterior-painting1.png"
+      description: "Enhance your property's curb appeal with durable exterior painting solutions. We use high-quality paints to protect and beautify your home or business in New Jersey, New York, and Pennsylvania.",
+      image: "/images/exterior-painting1.png",
+      alt: "Exterior Painting Services in New Jersey, New York, and Pennsylvania"
     },
     {
       title: "Commercial Painting",
       href: "/services/commercial-painting",
-      description: "Professional painting services for offices, retail spaces, and industrial facilities.",
-      image: "/images/commercial-painting1.jpg"
+      description: "Professional commercial painting services for offices, retail spaces, and industrial facilities in New Jersey, New York, and Pennsylvania. Trust us for efficient, high-quality results.",
+      image: "/images/commercial-painting1.jpg",
+      alt: "Commercial Painting Services in New Jersey, New York, and Pennsylvania"
     },
     {
       title: "Residential Painting",
       href: "/services/residential-painting",
-      description: "Personalized painting solutions for homes of all sizes and styles.",
-      image: "/images/d1.png"
+      description: "Personalized residential painting solutions for homes of all sizes and styles in New Jersey, New York, and Pennsylvania. We deliver exceptional quality and customer satisfaction.",
+      image: "/images/d1.png",
+      alt: "Residential Painting Services in New Jersey, New York, and Pennsylvania"
     },
     {
       title: "Specialty Finishes",
       href: "/services/specialty-finishes",
-      description: "Unique textures and finishes to add character to your walls.",
-      image: "/images/d2.png"
+      description: "Add character to your walls with unique textures and specialty finishes. Our experts in New Jersey, New York, and Pennsylvania create stunning, custom designs for any space.",
+      image: "/images/d2.png",
+      alt: "Specialty Finishes in New Jersey, New York, and Pennsylvania"
+    },
+  
+    // Flooring Services
+    {
+      title: "Hardwood Installation",
+      href: "/services/hardwood-installation",
+      description: "Install beautiful and durable hardwood flooring with our expert team in New Jersey, New York, and Pennsylvania. Perfect for homes and offices. Request a free consultation!",
+      image: "/images/hardwood.jpg",
+      alt: "Hardwood Flooring Installation in New Jersey, New York, and Pennsylvania"
     },
     {
-      title: "Cabinet Refinishing",
-      href: "/services/cabinet-refinishing",
-      description: "Revitalize your kitchen or bathroom with our cabinet refinishing services.",
-      image: "/images/kitchen1.jpg"
+      title: "Luxury Vinyl Plank Installation",
+      href: "/services/luxury-vinyl-plank-installation",
+      description: "Upgrade your space with modern and resilient luxury vinyl plank flooring. Our professionals in New Jersey, New York, and Pennsylvania ensure a flawless installation.",
+      image: "/images/luxury-vinyl.jpg",
+      alt: "Luxury Vinyl Plank Installation in New Jersey, New York, and Pennsylvania"
+    },
+    {
+      title: "Home Edition Flooring Tile Installation",
+      href: "/services/home-edition-flooring-tile-installation",
+      description: "Elegant and durable tile flooring installed to perfection in New Jersey, New York, and Pennsylvania. Transform your home with our expert tile installation services.",
+      image: "/images/tile-installation.jpg",
+      alt: "Tile Flooring Installation in New Jersey, New York, and Pennsylvania"
+    },
+  
+    // Exterior Services
+    {
+      title: "Roofing",
+      href: "/services/roofing",
+      description: "Protect and enhance your property with expert roofing services in New Jersey, New York, and Pennsylvania. We offer durable and stylish roofing solutions for homes and businesses.",
+      image: "/images/roofing.jpg",
+      alt: "Roofing Services in New Jersey, New York, and Pennsylvania"
+    },
+    {
+      title: "Siding",
+      href: "/services/siding",
+      description: "Upgrade your property's exterior with durable and stylish siding solutions in New Jersey, New York, and Pennsylvania. Improve aesthetics and protection with our expert team.",
+      image: "/images/siding.jpg",
+      alt: "Siding Installation in New Jersey, New York, and Pennsylvania"
     },
     {
       title: "Deck Staining",
       href: "/services/deck-staining",
-      description: "Protect and beautify your deck with our professional staining services.",
-      image: "/images/deck1.jpg"
+      description: "Protect and beautify your deck with professional staining services in New Jersey, New York, and Pennsylvania. We use high-quality stains for long-lasting results.",
+      image: "/images/deck1.jpg",
+      alt: "Deck Staining Services in New Jersey, New York, and Pennsylvania"
     },
     {
       title: "Power Washing",
       href: "/services/power-washing",
-      description: "Remove dirt, grime, and mildew from your property with our power washing services.",
-      image: "/images/powerwash.jpg"
+      description: "Remove dirt, grime, and mildew with our professional power washing services in New Jersey, New York, and Pennsylvania. Restore the beauty of your property today!",
+      image: "/images/powerwash.jpg",
+      alt: "Power Washing Services in New Jersey, New York, and Pennsylvania"
+    },
+  
+    // Home Improvement Services
+    {
+      title: "Cabinet Refinishing",
+      href: "/services/cabinet-refinishing",
+      description: "Revitalize your kitchen or bathroom with expert cabinet refinishing services in New Jersey, New York, and Pennsylvania. Affordable and transformative solutions for your home.",
+      image: "/images/kitchen1.jpg",
+      alt: "Cabinet Refinishing Services in New Jersey, New York, and Pennsylvania"
+    },
+    {
+      title: "Home Extension",
+      href: "/services/home-extension",
+      description: "Expand your living space with professional home extension services in New Jersey, New York, and Pennsylvania. We design and build to meet your needs and budget.",
+      image: "/images/home-extension.jpg",
+      alt: "Home Extension Services in New Jersey, New York, and Pennsylvania"
     }
   ];
 
