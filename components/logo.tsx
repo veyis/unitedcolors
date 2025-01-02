@@ -6,9 +6,10 @@ export function Logo() {
     <div className="flex items-end">
     
     <Image 
-       src="/logo/logo4.svg" alt="United Colors Painters Logo" 
-       width={70} 
-       height={50}
+       src="/logo/l3.png" alt="United Colors Painters Logo" 
+       width={42} 
+       height={42}
+     
       
        />
     
